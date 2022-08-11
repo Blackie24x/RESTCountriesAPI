@@ -5,13 +5,20 @@ import Country from "./components/Country";
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <Header></Header>
-        <Routes>
-          <Route path="/" element={<CountriesPanel />} />
-          <Route path="/:id" element={<Country />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route
+          path="/RESTCountriesAPI"
+          element={
+            <div className="App">
+              <Header></Header>
+              <Routes>
+                <Route path="/" element={<CountriesPanel />} />
+                <Route path="/:id" element={<Country />} />
+              </Routes>
+            </div>
+          }
+        ></Route>
+      </Routes>
     </BrowserRouter>
   );
 }
